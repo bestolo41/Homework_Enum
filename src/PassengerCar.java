@@ -2,7 +2,7 @@ import java.util.Objects;
 
 public class PassengerCar extends Car implements Competing {
 
-    public BodyType bodyType;
+    private BodyType bodyType;
     public PassengerCar(String brand, String model, double engineVolume, String bodyType) {
         super(brand, model, engineVolume);
         this.bodyType = BodyType.findByBodyType(bodyType);
@@ -72,6 +72,6 @@ public class PassengerCar extends Car implements Competing {
 
     @Override
     public String toString() {
-        return super.toString() + "\n" + BodyType.identifyBodyType(this);
+        return super.toString() + "\nКузов: " + BodyType.identifyBodyType(this);
     }
 }

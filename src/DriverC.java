@@ -1,26 +1,15 @@
+import java.awt.*;
 import java.util.Objects;
 
 public class DriverC<D extends Truck> extends Driver {
+
+
     private final char category = 'B';
 
     public DriverC(String name, int experience) {
         super(name, experience);
     }
 
-    public enum Tonnage {
-         N1 ("с полной массой до 3,5 тонн"),
-         N2 ("с полной массой свыше 3,5 до 12 тонн"),
-         N3 ("с полной массой свыше 12 тонн");
-        private final String tonnage;
-
-        Tonnage(String tonnage) {
-            this.tonnage = tonnage;
-        }
-
-        public String getTonnage() {
-            return tonnage;
-        }
-    }
     public void participation(D car) {
         System.out.println("Водитель " + getName() + " управляет грузовиком " + car.getBrand() + " " + car.getModel() + " и участвует в заезде");
     }
@@ -41,6 +30,7 @@ public class DriverC<D extends Truck> extends Driver {
     public char getCategory() {
         return category;
     }
+
 
     @Override
     public boolean equals(Object o) {

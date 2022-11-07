@@ -7,23 +7,7 @@ public class DriverD<D extends Bus> extends Driver{
         super(name, experience);
     }
 
-    public enum Capacity {
-        ESPECIALLY_SMALL("до 10 мест"),
-        SMALL("до 25"),
-        AVERAGE ("40–50"),
-        LARGE("60–80"),
-        ESPECIALLY_LARGE("100–120 мест");
 
-        private final String capacity;
-
-        Capacity(String capacity) {
-            this.capacity = capacity;
-        }
-
-        public String getCapacity() {
-            return capacity;
-        }
-    }
     public void participation(D car) {
         System.out.println("Водитель " + getName() + " управляет автобусом " + car.getBrand() + " " + car.getModel() + " и участвует в заезде");
     }

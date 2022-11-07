@@ -5,15 +5,15 @@ public class Main {
         PassengerCar vw = new PassengerCar("VW", "Polo", 1.6, "Седан");
         PassengerCar hyundai = new PassengerCar("Hyundai", "Solaris", 1.6, "Хетчбэк");
 
-        Truck kamaz = new Truck("KAMAZ", "5490", 11.76);
-        Truck volvo = new Truck("Volvo", "FH16", 12.8);
-        Truck scania = new Truck("Scania", "R440", 12.7);
-        Truck daf = new Truck("DAF", "105 XF", 12.9);
+        Truck kamaz = new Truck("KAMAZ", "5490", 11.76, "свыше 12 тонн");
+        Truck volvo = new Truck("Volvo", "FH16", 12.8,"свыше 12 тонн");
+        Truck scania = new Truck("Scania", "R440", 12.7,"свыше 12 тонн");
+        Truck daf = new Truck("DAF", "105 XF", 12.9,"свыше 12 тонн");
 
-        Bus mersedes = new Bus("Mersedes", "Tourismo", 11.98);
-        Bus hyundaiBus = new Bus("Hyundai", "Universe", 12.3);
-        Bus daewoo = new Bus("Daewoo", "BH120F Royal Cruiser II", 11.1);
-        Bus higer = new Bus("Higer", "KLQ 6128 LQ", 9.46);
+        Bus mersedes = new Bus("Mersedes", "Tourismo", 11.98,"40–50");
+        Bus hyundaiBus = new Bus("Hyundai", "Universe", 12.3,"40–50");
+        Bus daewoo = new Bus("Daewoo", "BH120F Royal Cruiser II", 11.1,"40–50");
+        Bus higer = new Bus("Higer", "KLQ 6128 LQ", 9.46,"40–50");
 
 
 //        lada.pitStop();
@@ -94,8 +94,25 @@ public class Main {
 //        george.participation(higer);
 //        joye.participation(daewoo);
 
-//        System.out.println(lada);
-//        System.out.println(kia);
+        System.out.println(lada);
+        System.out.println(kia);
+
+        System.out.println();
+
         System.out.println(PassengerCar.BodyType.identifyBodyType(lada));
+
+        System.out.println(kamaz);
+
+        System.out.println();
+
+        System.out.println(Truck.Tonnage.identifyTonnage(volvo));
+
+        System.out.println();
+
+        System.out.println(daewoo);
+
+        System.out.println();
+
+        System.out.println(Bus.Capacity.identifyCapacity(daewoo));
     }
 }
